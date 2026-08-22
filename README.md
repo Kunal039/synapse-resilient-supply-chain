@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/Kunal039/synapse-resilient-supply-chain/actions/workflows/ci.yml/badge.svg)](https://github.com/Kunal039/synapse-resilient-supply-chain/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](package.json)
 
 A working demo of **Synapse**, an autonomous nervous system for resilient supply
 chains. It's a real, running Node.js + browser app — not a mockup: a synthetic
