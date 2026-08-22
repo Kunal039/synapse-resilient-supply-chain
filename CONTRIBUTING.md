@@ -1,6 +1,6 @@
 # Contributing to Synapse
 
-Thanks for your interest in contributing! This is a hackathon prototype, so
+Thanks for your interest in contributing! This is a personal project, so
 the workflow below is intentionally lightweight.
 
 By participating in this project, you agree to abide by the
