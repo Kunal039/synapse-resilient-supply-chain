@@ -104,6 +104,16 @@ synapse-app/
 └── package.json
 ```
 
+## Contributing & branch protection
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow. In short:
+`main` is protected — changes land via pull request, require passing CI
+(`build-and-smoke-test` on Node 18.x/20.x) and one approving code owner
+review. Repo admins are exempt from the review requirement
+(`enforce_admins: false`), so they can merge their own PRs once CI is
+green; everyone else needs a review from a listed
+[CODEOWNERS](.github/CODEOWNERS) entry.
+
 ## Extending it after the hackathon
 
 - Swap `data/supplyChain.json` for a real ERP/supplier export.
