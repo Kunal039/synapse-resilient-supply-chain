@@ -4,12 +4,17 @@
   "description": "Synapse - an autonomous nervous system for resilient supply chains. Hackathon working prototype.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "node --test",
+    "coverage": "c8 --reporter=text --reporter=json-summary --include=\"src/**/*.js\" node --test"
   },
   "license": "MIT",
   "dependencies": {
     "cytoscape": "^3.34.1",
     "express": "^4.19.2",
     "playwright": "^1.62.1"
+  },
+  "devDependencies": {
+    "c8": "^9.1.0"
   }
 }
