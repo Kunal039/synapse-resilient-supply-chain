@@ -2,8 +2,8 @@
 
 ## Project status
 
-Synapse is a hackathon working prototype (see [README.md](README.md)), not
-a production system. It has no authentication, is meant to be run locally
+Synapse is a personal project and working prototype (see [README.md](README.md)),
+not a production system. It has no authentication, is meant to be run locally
 for a demo, and should not be exposed to the public internet or used to
 process real, sensitive supply-chain data as-is.
 
@@ -32,5 +32,5 @@ Please do not open a public issue or pull request for undisclosed security
 vulnerabilities.
 
 We'll acknowledge reports as soon as we can and aim to follow up with a fix
-or a mitigation plan. Since this is a small, single-maintainer hackathon
+or a mitigation plan. Since this is a small, single-maintainer personal
 project, response times are best-effort rather than SLA-backed.

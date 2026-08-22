@@ -1,7 +1,7 @@
 {
   "name": "synapse-resilient-supply-chain",
   "version": "1.1.1",
-  "description": "Synapse - an autonomous nervous system for resilient supply chains. Hackathon working prototype.",
+  "description": "Synapse - an autonomous nervous system for resilient supply chains. A personal project exploring graduated autonomy for supply chain resilience.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
