@@ -3,6 +3,9 @@
 Thanks for your interest in contributing! This is a hackathon prototype, so
 the workflow below is intentionally lightweight.
 
+By participating in this project, you agree to abide by the
+[Code of Conduct](CODE_OF_CONDUCT.md).
+
 ## Getting set up
 
 ```bash
