@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Contributors badge now uses a fixed blue color instead of shields.io's default scale, which rendered a single contributor as red.
+
 ## [1.1.0] - 2026-08-22
 
 ### Added
