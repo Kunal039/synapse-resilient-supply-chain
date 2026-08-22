@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-08-22
+
 ### Fixed
 
 - Contributors badge now uses a fixed blue color instead of shields.io's default scale, which rendered a single contributor as red.
@@ -54,6 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub issue templates (bug report, feature request) and a pull request
   template.
 
-[Unreleased]: https://github.com/Kunal039/synapse-resilient-supply-chain/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/Kunal039/synapse-resilient-supply-chain/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/Kunal039/synapse-resilient-supply-chain/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/Kunal039/synapse-resilient-supply-chain/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/Kunal039/synapse-resilient-supply-chain/releases/tag/v1.0.0
