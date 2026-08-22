@@ -33,6 +33,9 @@ jobs:
           for f in src/*.js; do node --check "$f"; done
           for f in public/*.js; do node --check "$f"; done
 
+      - name: Run unit tests with coverage
+        run: npm run coverage
+
       - name: Smoke test - server boots and serves the API
         run: |
           node server.js &

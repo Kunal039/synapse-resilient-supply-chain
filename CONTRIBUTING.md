@@ -32,18 +32,24 @@ Then open http://localhost:3000.
    node --check src/graphEngine.js
    node --check public/app.js
    ```
-4. Push your branch and open a pull request against `main`.
+4. Run the unit tests, and check coverage if you touched `src/graphEngine.js`:
+   ```bash
+   npm test
+   npm run coverage
+   ```
+5. Push your branch and open a pull request against `main`.
 
 ## Pull request workflow
 
 1. Open a PR from your branch into `main` with a description of what
    changed and why.
 2. CI runs automatically (`.github/workflows/ci.yml`) — it installs
-   dependencies, syntax-checks the source, and smoke-tests that the server
-   boots and serves `/api/graph` and `/api/scenarios` on Node 18.x and 20.x.
-   All checks must pass before merging.
-3. At least one approving review is required before merging (repo admins
-   may merge their own PRs once CI passes).
+   dependencies, syntax-checks the source, runs the unit test suite with
+   coverage, and smoke-tests that the server boots and serves
+   `/api/graph` and `/api/scenarios` on Node 18.x and 20.x. All checks must
+   pass before merging.
+3. At least one approving code owner review is required before merging
+   (repo admins may merge their own PRs once CI passes).
 4. Once CI is green and the PR is approved, merge it. Prefer "Squash and
    merge" to keep `main` history readable.
 5. Delete the branch after merging.
