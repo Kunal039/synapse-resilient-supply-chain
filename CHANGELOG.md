@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- README version badge now links to the [v1.0.0 release](https://github.com/Kunal039/synapse-resilient-supply-chain/releases/tag/v1.0.0) instead of `package.json`.
+
 ## [1.0.0] - 2026-08-22
 
 ### Added
