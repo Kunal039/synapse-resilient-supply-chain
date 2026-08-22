@@ -1,0 +1,90 @@
+{
+  "nodes": [
+    { "id": "cust-na", "label": "North America Retail", "type": "customer", "tier": 0, "region": "North America" },
+    { "id": "cust-eu", "label": "Europe Retail", "type": "customer", "tier": 0, "region": "Europe" },
+
+    { "id": "dc-la", "label": "LA Distribution Center", "type": "warehouse", "tier": 1, "region": "North America", "safetyStockDays": 6 },
+    { "id": "dc-rotterdam", "label": "Rotterdam DC", "type": "warehouse", "tier": 1, "region": "Europe", "safetyStockDays": 4 },
+
+    { "id": "port-la", "label": "Port of Los Angeles", "type": "port", "tier": 1, "region": "North America" },
+    { "id": "port-rotterdam", "label": "Port of Rotterdam", "type": "port", "tier": 1, "region": "Europe" },
+    { "id": "route-suez", "label": "Suez Canal Route", "type": "route", "tier": 1, "region": "Middle East" },
+    { "id": "route-cape", "label": "Cape of Good Hope Route", "type": "route", "tier": 1, "region": "Africa", "isBackupFor": "route-suez", "extraDays": 10 },
+
+    { "id": "sup-t1-electro", "label": "Electro Assembly Pte (T1)", "type": "supplier", "tier": 1, "region": "Singapore", "leadTimeDays": 12, "qualified": true, "product": "electronics" },
+    { "id": "sup-t1-textile", "label": "Meridian Textiles (T1)", "type": "supplier", "tier": 1, "region": "Vietnam", "leadTimeDays": 9, "qualified": true, "product": "textile" },
+    { "id": "sup-t1-auto", "label": "AutoForge Components (T1)", "type": "supplier", "tier": 1, "region": "Mexico", "leadTimeDays": 5, "qualified": true, "product": "auto" },
+
+    { "id": "sup-t2-chip", "label": "NanoChip Fab (T2)", "type": "supplier", "tier": 2, "region": "Taiwan", "leadTimeDays": 21, "qualified": true, "singleSource": true, "product": "electronics" },
+    { "id": "sup-t2-chip-backup", "label": "SecondSource Fab (T2 backup)", "type": "supplier", "tier": 2, "region": "South Korea", "leadTimeDays": 24, "qualified": true, "isBackupFor": "sup-t2-chip", "product": "electronics" },
+    { "id": "sup-t2-resin", "label": "PolyResin Works (T2)", "type": "supplier", "tier": 2, "region": "China", "leadTimeDays": 15, "qualified": true, "product": "electronics" },
+    { "id": "sup-t2-cotton", "label": "Delta Cotton Mills (T2)", "type": "supplier", "tier": 2, "region": "India", "leadTimeDays": 11, "qualified": true, "product": "textile" },
+    { "id": "sup-t2-steel", "label": "Ferro Steel Works (T2)", "type": "supplier", "tier": 2, "region": "Brazil", "leadTimeDays": 14, "qualified": true, "product": "auto" },
+    { "id": "sup-t2-alt-unqualified", "label": "QuickForge Ltd (T2, unqualified)", "type": "supplier", "tier": 2, "region": "Myanmar", "leadTimeDays": 8, "qualified": false, "riskFlag": "compliance-unreviewed", "product": "auto" },
+
+    { "id": "sup-t3-rareearth", "label": "Rare Earth Minerals Co (T3)", "type": "supplier", "tier": 3, "region": "DR Congo", "leadTimeDays": 30, "qualified": true, "riskFlag": "sanctions-watchlist", "product": "electronics" },
+    { "id": "sup-t3-cotton-raw", "label": "Raw Cotton Growers Co-op (T3)", "type": "supplier", "tier": 3, "region": "India", "leadTimeDays": 20, "qualified": true, "product": "textile" },
+    { "id": "sup-t3-silica", "label": "Silica Quarry Group (T3)", "type": "supplier", "tier": 3, "region": "Australia", "leadTimeDays": 18, "qualified": true, "product": "electronics" },
+
+    { "id": "sku-phone", "label": "SKU: Smart Device X1", "type": "sku", "tier": 1, "unitsAtRisk": 42000, "product": "electronics" },
+    { "id": "sku-jacket", "label": "SKU: All-Weather Jacket", "type": "sku", "tier": 1, "unitsAtRisk": 18000, "product": "textile" },
+    { "id": "sku-auto-part", "label": "SKU: Brake Assembly B12", "type": "sku", "tier": 1, "unitsAtRisk": 9000, "product": "auto" }
+  ],
+  "edges": [
+    { "from": "sup-t3-rareearth", "to": "sup-t2-chip", "mode": "sea", "leadTimeDays": 18 },
+    { "from": "sup-t3-silica", "to": "sup-t2-chip", "mode": "sea", "leadTimeDays": 14 },
+    { "from": "sup-t2-chip", "to": "sup-t1-electro", "mode": "air", "leadTimeDays": 3 },
+    { "from": "sup-t2-chip-backup", "to": "sup-t1-electro", "mode": "air", "leadTimeDays": 4 },
+    { "from": "sup-t2-resin", "to": "sup-t1-electro", "mode": "sea", "leadTimeDays": 9 },
+    { "from": "sup-t1-electro", "to": "route-suez", "mode": "sea", "leadTimeDays": 16 },
+    { "from": "route-suez", "to": "port-rotterdam", "mode": "sea", "leadTimeDays": 4 },
+    { "from": "route-cape", "to": "port-rotterdam", "mode": "sea", "leadTimeDays": 14 },
+    { "from": "sup-t1-electro", "to": "port-la", "mode": "sea", "leadTimeDays": 13 },
+    { "from": "port-la", "to": "dc-la", "mode": "truck", "leadTimeDays": 2 },
+    { "from": "port-rotterdam", "to": "dc-rotterdam", "mode": "truck", "leadTimeDays": 1 },
+    { "from": "dc-la", "to": "sku-phone", "mode": "internal", "leadTimeDays": 1 },
+    { "from": "dc-rotterdam", "to": "sku-phone", "mode": "internal", "leadTimeDays": 1 },
+
+    { "from": "sup-t3-cotton-raw", "to": "sup-t2-cotton", "mode": "truck", "leadTimeDays": 6 },
+    { "from": "sup-t2-cotton", "to": "sup-t1-textile", "mode": "sea", "leadTimeDays": 8 },
+    { "from": "sup-t1-textile", "to": "route-suez", "mode": "sea", "leadTimeDays": 12 },
+    { "from": "sup-t1-textile", "to": "port-la", "mode": "sea", "leadTimeDays": 15 },
+    { "from": "dc-la", "to": "sku-jacket", "mode": "internal", "leadTimeDays": 1 },
+    { "from": "dc-rotterdam", "to": "sku-jacket", "mode": "internal", "leadTimeDays": 1 },
+
+    { "from": "sup-t2-steel", "to": "sup-t1-auto", "mode": "truck", "leadTimeDays": 4 },
+    { "from": "sup-t2-alt-unqualified", "to": "sup-t1-auto", "mode": "truck", "leadTimeDays": 2 },
+    { "from": "sup-t1-auto", "to": "dc-la", "mode": "truck", "leadTimeDays": 3 },
+    { "from": "dc-la", "to": "sku-auto-part", "mode": "internal", "leadTimeDays": 1 },
+
+    { "from": "dc-la", "to": "cust-na", "mode": "truck", "leadTimeDays": 2 },
+    { "from": "dc-rotterdam", "to": "cust-eu", "mode": "truck", "leadTimeDays": 2 }
+  ],
+  "scenarios": {
+    "port-closure": {
+      "label": "Suez Canal Route Closure",
+      "description": "A geopolitical incident forces all shipping traffic away from the Suez Canal route with no advance warning.",
+      "targetNodeId": "route-suez",
+      "failureMode": "blocked",
+      "extraDelayDays": 10,
+      "backupNodeId": "route-cape"
+    },
+    "supplier-outage": {
+      "label": "Single-Source Chip Fab Outage",
+      "description": "NanoChip Fab (Taiwan), the sole qualified source for a critical component, goes offline after a factory incident.",
+      "targetNodeId": "sup-t2-chip",
+      "failureMode": "offline",
+      "extraDelayDays": 21,
+      "backupNodeId": "sup-t2-chip-backup"
+    },
+    "tariff-spike": {
+      "label": "Overnight Tariff Spike",
+      "description": "A sudden 35% tariff is imposed on components sourced through AutoForge Components (Mexico), changing sourcing economics overnight.",
+      "targetNodeId": "sup-t1-auto",
+      "failureMode": "cost-shock",
+      "extraDelayDays": 0,
+      "costShockPct": 35,
+      "backupNodeId": "sup-t2-alt-unqualified"
+    }
+  }
+}

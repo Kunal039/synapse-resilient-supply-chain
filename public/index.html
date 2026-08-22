@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Synapse — Live Control Tower</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%231c7293'/%3E%3Cpath d='M13 3 5 14h5l-1 7 8-11h-5z' fill='%23fff'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-badge">⚡</div>
+      <div>
+        <div class="brand-name">SYNAPSE</div>
+        <div class="brand-tag">An Autonomous Nervous System for Resilient Supply Chains</div>
+      </div>
+    </div>
+    <div class="stats" id="stats">
+      <div class="stat"><span class="stat-value" id="stat-total">0</span><span class="stat-label">Disruptions Handled</span></div>
+      <div class="stat"><span class="stat-value" id="stat-auto">0</span><span class="stat-label">Auto-Executed</span></div>
+      <div class="stat"><span class="stat-value" id="stat-escalated">0</span><span class="stat-label">Escalated</span></div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="graph-panel">
+      <div class="panel-title">Multi-Tier Supply Chain Graph</div>
+      <div id="cy"></div>
+      <div class="legend">
+        <span class="legend-item"><i class="dot dot-normal"></i>Normal</span>
+        <span class="legend-item"><i class="dot dot-affected"></i>Affected</span>
+        <span class="legend-item"><i class="dot dot-rerouted"></i>Rerouted / New Path</span>
+        <span class="legend-item"><i class="dot dot-resolved"></i>Resolved</span>
+      </div>
+    </section>
+
+    <aside class="side-panel">
+      <div class="panel-title">Inject a Disruption</div>
+      <div class="scenario-list" id="scenario-list"></div>
+
+      <div class="panel-title console-title">Live Agent Console</div>
+      <div class="console" id="console">
+        <div class="console-placeholder">Select a scenario above to watch Synapse sense, simulate, decide, and act in real time.</div>
+      </div>
+    </aside>
+  </main>
+
+  <div class="approval-bar" id="approval-overlay">
+    <div class="approval-badge">HUMAN<br />APPROVAL</div>
+    <div class="approval-body">
+      <h3 id="approval-title"></h3>
+      <p id="approval-detail"></p>
+    </div>
+    <div class="approval-meta" id="approval-meta"></div>
+    <div class="approval-actions">
+      <button class="btn btn-ghost" id="btn-reject">Reject</button>
+      <button class="btn btn-primary" id="btn-approve">Approve &amp; Execute</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="vendor/cytoscape.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
