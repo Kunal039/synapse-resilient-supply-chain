@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-22
+
 ### Added
 
 - README "Contributing & branch protection" section summarizing the PR/CI/review requirements on `main` and the admin merge exemption.
@@ -48,5 +50,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub issue templates (bug report, feature request) and a pull request
   template.
 
-[Unreleased]: https://github.com/Kunal039/synapse-resilient-supply-chain/compare/main...HEAD
+[Unreleased]: https://github.com/Kunal039/synapse-resilient-supply-chain/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/Kunal039/synapse-resilient-supply-chain/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/Kunal039/synapse-resilient-supply-chain/releases/tag/v1.0.0
