@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/Kunal039/synapse-resilient-supply-chain/actions/workflows/ci.yml/badge.svg)](https://github.com/Kunal039/synapse-resilient-supply-chain/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](package.json)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/Kunal039/synapse-resilient-supply-chain/releases/tag/v1.0.0)
 [![GitHub issues](https://img.shields.io/github/issues/Kunal039/synapse-resilient-supply-chain)](https://github.com/Kunal039/synapse-resilient-supply-chain/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/Kunal039/synapse-resilient-supply-chain)](https://github.com/Kunal039/synapse-resilient-supply-chain/pulls)
 [![Coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FKunal039%2Fsynapse-resilient-supply-chain%2Fbadges%2Fcoverage.json)](https://github.com/Kunal039/synapse-resilient-supply-chain/actions/workflows/ci.yml)
