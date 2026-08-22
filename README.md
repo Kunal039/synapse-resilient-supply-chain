@@ -6,7 +6,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/Kunal039/synapse-resilient-supply-chain)](https://github.com/Kunal039/synapse-resilient-supply-chain/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/Kunal039/synapse-resilient-supply-chain)](https://github.com/Kunal039/synapse-resilient-supply-chain/pulls)
 [![Coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FKunal039%2Fsynapse-resilient-supply-chain%2Fbadges%2Fcoverage.json)](https://github.com/Kunal039/synapse-resilient-supply-chain/actions/workflows/ci.yml)
-[![Contributors](https://img.shields.io/github/contributors/Kunal039/synapse-resilient-supply-chain)](https://github.com/Kunal039/synapse-resilient-supply-chain/graphs/contributors)
+[![Contributors](https://img.shields.io/github/contributors/Kunal039/synapse-resilient-supply-chain?color=blue)](https://github.com/Kunal039/synapse-resilient-supply-chain/graphs/contributors)
 
 A working demo of **Synapse**, an autonomous nervous system for resilient supply
 chains. It's a real, running Node.js + browser app — not a mockup: a synthetic
